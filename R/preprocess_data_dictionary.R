@@ -8,10 +8,6 @@ preprocess_data_dictionary <- function(data_dictionary) {
     field_type <- field$field_type
     field_validation <- field$text_validation_type_or_show_slider_number
     field_annotation <- field$field_annotation
-    print(field_name)
-    print(field_type)
-    print(field_validation)
-    print(field_annotation)
     
     # Custom functions
     pattern <- ".*@REDSYNTH='(.*?)'"
