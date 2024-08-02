@@ -1,0 +1,18 @@
+Package: REDSynth
+Type: Package
+Title: REDCap Data Synthesiser
+Version: 0.1
+Authors@R: person("Aidan", "Wilson", email = "aidan.b.wilson@gmail.com", role = c("aut", "cre"))
+Maintainer: Aidan Wilson <aidan.b.wilson@gmail.com>
+Description: REDCap Data Synthesiser is a package that generates synthetic record data for REDCap projects. 
+License: MIT
+URL: https://github.com/jangari/REDSynth
+BugReports: https://github.com/jangari/REDSynth/issues
+Encoding: UTF-8
+Imports:
+    jsonlite,
+    httr,
+    randomNames,
+    dplyr,
+    stringr,
+    lorem
