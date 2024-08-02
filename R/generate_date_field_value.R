@@ -1,5 +1,6 @@
 generate_date_field_value <- function(field) {
   # Generate synthetic data for date fields
+  field_name <- field$field_name
   field_label <- tolower(field$field_label)
   validation_type <- field$text_validation_type_or_show_slider_number
   min_val <- field$text_validation_min
@@ -30,8 +31,9 @@ generate_date_field_value <- function(field) {
     )
     strftime_param <- date_format_mapping[[validation_type]]
     if (grepl('dob|birth', field_label) || grepl('dob|birth', field_name)) {
-      return(as.character(Sys.Date() - sample(1:365*100, 1)))
+        generated_date <- Sys.time() - sample(0:(100 * 365 * 24 * 60 * 60), 1)
     } else {
-      return(as.character(Sys.Date() - sample(1:365*10, 1)))
+        generated_date <- Sys.time() - sample(0:(10 * 365 * 24 * 60 * 60), 1)
     }
+    return(format(generated_date, strftime_param))
 }

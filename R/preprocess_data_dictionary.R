@@ -62,8 +62,6 @@ preprocess_data_dictionary <- function(data_dictionary) {
     } else if (field_type == "notes") {
       field_mapping[[field_name]] <- generate_notes_field_value
     }
-    #Add more field type mappings as needed
   }
-  
   return(field_mapping)
 }
